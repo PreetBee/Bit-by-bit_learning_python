@@ -23,3 +23,16 @@ def encrypt(original_text, shift_amount):
 #  message.
 
 encrypt(original_text = text, shift_amount= shift)
+
+# TODO-1: Create a function called 'decrypt()' that takes 'original_text' and 'shift_amount' as inputs.
+
+def decrypt(original_text, shift_amount):
+# TODO-2: Inside the 'decrypt()' function, shift each letter of the 'original_text' *backwards* in the alphabet
+#  by the shift amount and print the decrypted text.
+    decoded_text = ""
+    for letter in original_text:
+        shifted_position2 = alphabet.index(letter)- shift_amount
+        shifted_position2 %= len(alphabet)
+        decoded_text += alphabet[shifted_position2]
+    print(f"Here is the decoded result: {decoded_text}")
+decrypt(original_text= text , shift_amount= shift)
